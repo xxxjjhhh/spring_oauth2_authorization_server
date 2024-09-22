@@ -26,6 +26,7 @@ public class SecurityConfig {
         return new BCryptPasswordEncoder();
     }
 
+    // OAuth2 인가 서버를 위한 SecurityFilterChain
     @Bean
     @Order(Ordered.HIGHEST_PRECEDENCE)
     public SecurityFilterChain authorizationServer(HttpSecurity http) throws Exception {
@@ -62,6 +63,7 @@ public class SecurityConfig {
         return http.build();
     }
 
+    // OAuth2 인가 서버 활성화 및 커스텀을 위한 Bean
     @Bean
     public AuthorizationServerSettings authorizationServerSettings() {
 

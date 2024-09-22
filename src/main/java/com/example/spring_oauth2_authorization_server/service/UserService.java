@@ -17,6 +17,7 @@ public class UserService {
         this.bCryptPasswordEncoder = bCryptPasswordEncoder;
     }
 
+    // 회원 가입 프로세스
     public void join(UserDTO dto) {
 
         UserEntity entity = new UserEntity();
